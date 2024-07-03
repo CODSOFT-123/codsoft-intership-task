@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+	int number, Playerguess, No_of_tries = 0;
+	srand(time(0)); //Create the random function
+	number = rand() % 100 + 1; // random number 
+	cout << "Player guess the number\n";
+
+	do
+	{
+		cout << "Enter  the guessed number ";
+		cin >> Playerguess;
+		No_of_tries++;//The number of times player guess or tries to play
+
+		if (Playerguess > number)
+			cout << "The number is too high\n";
+		else if (Playerguess < number)
+			cout << "The number is too low!\n";
+		else
+			cout << "Congratulation! You guessed it  right" << No_of_tries << " Playerguesses!\n";
+	} while (Playerguess != number);
+
+	return 0;
+}
