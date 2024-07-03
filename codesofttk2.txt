@@ -1,0 +1,39 @@
+# include <iostream>
+using namespace std;
+int main() {
+
+  char option;
+  float number1, number2;
+
+  cout << "choose operation: +, -, *, /: ";   // for choosing the mathematical opertion
+  cin >> option;
+
+  cout << "Enter two number: ";
+  cin >> number1 >> number2;
+
+  switch(option) {
+
+    case '+':
+      cout << number1 << " + " << number2 << " = " << number1 + number2;
+      break;
+
+    case '-':
+      cout << number1 << " - " << number2 << " = " << number1 - number2;
+      break;
+
+    case '*':
+      cout << number1 << " * " << number2 << " = " << number1 * number2;
+      break;
+
+    case '/':
+      cout << number1 << " / " << number2 << " = " << number1 / number2;
+      break;
+
+    default:   // for unknown opertion
+      
+      cout << "Wrong! opreation not found";
+      break;
+  }
+
+  return 0;
+}
